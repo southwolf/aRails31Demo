@@ -1,10 +1,10 @@
 = simple_form_for(@post) do |f|
-  = f.error_notification
+  = render 'shared/error_messages', :target => @post
 
   .inputs
     = f.input :title
     = f.input :sequence
-    = f.input :description
+    = f.input :description, :input_html => {:rows =>5}
 
   .actions
     = f.button :submit
