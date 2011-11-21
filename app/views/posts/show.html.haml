@@ -10,3 +10,10 @@
         .content
           .caption= section.snippet.caption
           ~ sanitize( coderay(section.snippet.content, section.snippet.language) )
+          
+.postNav
+  .prev= post_link(:previous)
+  .next= post_link(:next)
+%br
+%br
+%p= link_to 'View All Posts', posts_path

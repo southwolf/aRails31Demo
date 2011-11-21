@@ -20,4 +20,13 @@ class Post
     sections.build if sections.empty?
     sections.each{ |section| section.build_snippet if section.snippet.nil?}
   end
+  
+  def post(position)
+    increment = position == :previous ? -1 : 1
+    Post.find_by_sequence(self.sequence + increment)
+  end
+  
+  def self.find_by_sequence(seq)
+    where(:sequence => seq.to_i).first
+  end
 end
