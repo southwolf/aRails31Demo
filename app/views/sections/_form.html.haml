@@ -1,0 +1,11 @@
+= simple_form_for(@section) do |f|
+  = f.error_notification
+
+  .inputs
+    = f.input :heading
+    = f.input :body
+    = f.input :position
+    = f.association :post
+
+  .actions
+    = f.button :submit

@@ -24,7 +24,8 @@ class PostsController < ApplicationController
   # GET /posts/new
   # GET /posts/new.json
   def new
-    @post = Post.new
+    @post = Post.new(:sequence => Post.count + 1)
+    @post.sections.build
 
     respond_to do |format|
       format.html # new.html.erb
