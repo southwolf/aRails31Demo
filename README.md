@@ -1,4 +1,4 @@
-# a Rails 3.1(currently 3.1.3) version of [aRailsDemo](www.aRailsDemo.com)
+# a Rails 3.1(currently 3.1.3) version of [aRailsDemo](http://www.aRailsDemo.com)
 
 ###Introduces Rails 3.1 new features
 
