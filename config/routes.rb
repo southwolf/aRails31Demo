@@ -1,10 +1,8 @@
 ARails31Demo::Application.routes.draw do
-
-
-  resources :snippets
-
   resources :posts do
-    resources :sections
+    resources :sections do
+      resources :snippets
+    end
   end
   root :to => "posts#index" 
 
