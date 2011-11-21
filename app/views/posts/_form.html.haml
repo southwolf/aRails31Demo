@@ -15,5 +15,13 @@
         = section_f.text_area :body, :input_html => {:rows =>5}
         = section_f.input :position
         
+        = section_f.simple_fields_for :snippet do |snippet_f|
+          .snippet
+            %h3 Snippet
+            = snippet_f.input :caption
+            = section_f.label :content
+            = snippet_f.text_area :content, :input_html => {:rows =>5}
+            = snippet_f.input :language, :as => :select, :collection => coderay_languages
+        %hr
   .actions
     = f.button :submit

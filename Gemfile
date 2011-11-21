@@ -9,6 +9,8 @@ gem 'bson_ext'
 
 gem 'simple_form'
 
+gem 'coderay'
+
 group :assets do
   gem 'sass-rails',   '~> 3.1.5'
   gem 'coffee-rails', '~> 3.1.1'

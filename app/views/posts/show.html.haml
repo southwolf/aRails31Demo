@@ -5,4 +5,8 @@
   .section
     %h2= section.heading
     .body= sanitize section.body
-    %hr
+    - unless section.snippet.blank?
+      .snippet
+        .content
+          .caption= section.snippet.caption
+          ~ sanitize( coderay(section.snippet.content, section.snippet.language) )

@@ -1,0 +1,11 @@
+= simple_form_for(@snippet) do |f|
+  = f.error_notification
+
+  .inputs
+    = f.input :caption
+    = f.input :content
+    = f.input :language
+    = f.association :section
+
+  .actions
+    = f.button :submit
