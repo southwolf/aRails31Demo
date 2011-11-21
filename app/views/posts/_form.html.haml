@@ -4,7 +4,8 @@
   .inputs
     = f.input :title
     = f.input :sequence
-    = f.input :description, :input_html => {:rows =>5}
+    = f.label :description
+    = f.text_area :description, :input_html => {:rows =>5}
 
   .actions
     = f.button :submit
