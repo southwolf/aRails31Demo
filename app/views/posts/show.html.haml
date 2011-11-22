@@ -17,3 +17,7 @@
 %br
 %br
 %p= link_to 'View All Posts', posts_path
+-if admin?
+  = link_to 'Edit', edit_post_path(@post.sequence)
+  |
+  = link_to 'New', new_post_path
